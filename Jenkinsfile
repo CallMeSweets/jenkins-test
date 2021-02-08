@@ -1,8 +1,7 @@
 pipeline {
   agent any
-  tools {
-      maven 'mymaven'
-      jdk 'myjdk11'
+  environment {
+   PATH = "/usr/bin:$PATH"
   }
   stages {
     stage("build"){
