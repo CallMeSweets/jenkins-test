@@ -1,10 +1,7 @@
 pipeline {
   agent any
-  environment {
-   PATH = "/usr/share/maven/bin:$PATH"
-  }
   tools {
-      maven 'mymaven'
+      maven 'maven'
       jdk 'myjdk11'
   }
   stages {
