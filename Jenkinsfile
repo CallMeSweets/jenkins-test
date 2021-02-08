@@ -3,6 +3,10 @@ pipeline {
   environment {
    PATH = "/usr/share/maven/bin:$PATH"
   }
+  tools {
+      maven 'mymaven'
+      jdk 'myjdk11'
+  }
   stages {
     stage("build"){
       steps {
