@@ -1,5 +1,8 @@
 pipeline {  
    agent any  
+   tools {
+      jdk 'jdk11'
+   }
    stages {  
        stage('build') {  
            steps {  
@@ -9,5 +12,7 @@ pipeline {
               sh 'mvn clean package'
            }  
        }  
+   }
+   post { 
    }  
 }
