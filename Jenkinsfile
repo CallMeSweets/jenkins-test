@@ -19,7 +19,7 @@ pipeline {
        } 
        success {  
           echo 'building image...'
-          sh 'sudo docker build -t message-service .' 
+          sh 'docker build -t message-service .' 
        }  
    }  
 }
