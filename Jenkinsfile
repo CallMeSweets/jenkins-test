@@ -17,5 +17,9 @@ pipeline {
        always {  
          echo 'This will always run'  
        } 
+       success {  
+          echo 'building image...'
+          sh 'sudo docker build -t message-service .' 
+       }  
    }  
 }
