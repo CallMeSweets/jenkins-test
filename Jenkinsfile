@@ -12,14 +12,14 @@ pipeline {
         sh 'mvn clean package'
       }
     }
-    post {
-      success {
-          echo 'building image...'
-          sudo docker build -t message-service .
-      }
-      failure {
-          echo 'building failure...'
-      }
+  }
+  post {
+    success {
+        echo 'building image...'
+        sudo docker build -t message-service .
+    }
+    failure {
+        echo 'building failure...'
     }
   }
 }
